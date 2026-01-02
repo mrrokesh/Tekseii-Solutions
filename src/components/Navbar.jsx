@@ -44,12 +44,6 @@ const Navbar = ({ isScrolled }) => {
                 )}
               </Link>
             ))}
-            <Link
-              to="/careers"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              Careers
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,13 +77,6 @@ const Navbar = ({ isScrolled }) => {
                 {item.label}
               </Link>
             ))}
-            <Link
-              to="/careers"
-              onClick={() => setIsOpen(false)}
-              className="block py-2 font-medium text-blue-600"
-            >
-              Careers
-            </Link>
           </motion.div>
         )}
       </div>

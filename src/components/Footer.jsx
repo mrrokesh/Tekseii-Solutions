@@ -19,7 +19,7 @@ const Footer = () => {
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition">
                 <FaInstagram size={20} />
               </a>
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
+              <a href="https://wa.me/917904352560" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
                 <FaWhatsapp size={20} />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
@@ -37,7 +37,6 @@ const Footer = () => {
               <li><Link to="/courses" className="text-gray-400 hover:text-white transition">Courses</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-white transition">Services</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
-              <li><Link to="/careers" className="text-gray-400 hover:text-white transition">Careers</Link></li>
             </ul>
           </div>
 
@@ -63,7 +62,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <FaPhone className="text-blue-400" />
-                <a href="tel:+919876543210" className="text-gray-400 hover:text-white transition">+91 98765 43210</a>
+                <a href="tel:+917904352560" className="text-gray-400 hover:text-white transition">+91 79043 52560</a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-400" />

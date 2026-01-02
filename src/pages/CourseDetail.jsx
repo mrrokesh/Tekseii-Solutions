@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { courses } from '../data/courses'
-import { FaClock, FaUser, FaCheckCircle } from 'react-icons/fa'
+import { FaClock, FaUser, FaCheckCircle, FaArrowLeft, FaAward, FaLaptopCode } from 'react-icons/fa'
 
 const CourseDetail = () => {
   const { courseId } = useParams()
@@ -21,125 +21,213 @@ const CourseDetail = () => {
   }
 
   return (
-    <div className="pt-20">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+    <div className="pt-20 bg-gray-50 min-h-screen">
+      <div className="container mx-auto px-4 py-8">
+        {/* Back to Courses Link */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mb-6"
+        >
+          <Link
+            to="/courses"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition"
           >
-            <div className="max-w-4xl">
-              <span className="inline-block bg-white/20 px-4 py-2 rounded-full mb-4 text-sm font-semibold">
-                {course.category}
-              </span>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">{course.title}</h1>
-              <p className="text-xl text-blue-100 mb-8">{course.description}</p>
-              <div className="flex flex-wrap gap-6 mb-8">
-                <div className="flex items-center gap-2">
-                  <FaClock className="text-2xl" />
-                  <span className="text-lg">{course.duration}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaUser className="text-2xl" />
-                  <span className="text-lg">{course.level}</span>
+            <FaArrowLeft /> <span>Back to Courses</span>
+          </Link>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2">
+            {/* Course Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-xl shadow-lg p-8 mb-8"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex-1">
+                  <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                    {course.category}
+                  </span>
+                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    {course.title}
+                  </h1>
+                  <p className="text-xl text-gray-600 mb-6">{course.description}</p>
                 </div>
               </div>
+              
+              <div className="flex flex-wrap items-center gap-6 mb-6">
+                <div className="flex items-center gap-2 text-gray-700">
+                  <FaClock className="text-blue-600" />
+                  <span className="font-medium">{course.duration}</span>
+                </div>
+                <div className="flex items-center gap-2 text-green-600">
+                  <FaAward className="text-xl" />
+                  <span className="font-semibold">Certificate Included</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Course Objectives */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-xl shadow-lg p-8 mb-8"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Course Objectives</h2>
+              <div className="space-y-4">
+                {(course.objectives || [
+                  'Master core concepts',
+                  'Develop practical skills',
+                  'Build real-world projects',
+                  'Prepare for industry'
+                ]).map((objective, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <FaCheckCircle className="text-green-500 text-xl mt-1 flex-shrink-0" />
+                    <span className="text-gray-700 text-lg">{objective}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Course Modules */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-xl shadow-lg p-8 mb-8"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Course Modules</h2>
+              <ol className="space-y-3">
+                {course.modules.map((module, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                      {index + 1}
+                    </span>
+                    <span className="text-gray-700 text-lg pt-1">{module}</span>
+                  </li>
+                ))}
+              </ol>
+            </motion.div>
+
+            {/* Career Opportunities */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-white rounded-xl shadow-lg p-8 mb-8"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Career Opportunities</h2>
+              <div className="flex flex-wrap gap-3">
+                {(course.careerOpportunities || [
+                  'Software Developer',
+                  'IT Professional',
+                  'Technical Specialist'
+                ]).map((career, index) => (
+                  <span
+                    key={index}
+                    className="bg-blue-50 text-blue-700 px-4 py-2 rounded-lg font-medium"
+                  >
+                    {career}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="sticky top-24"
+            >
+              {/* Course Information Card */}
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Course Information</h3>
+                
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center gap-2 text-gray-600 mb-2">
+                      <FaClock className="text-blue-600" />
+                      <span className="font-semibold">Duration</span>
+                    </div>
+                    <p className="text-gray-900 font-medium">{course.duration}</p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 text-gray-600 mb-2">
+                      <FaUser className="text-blue-600" />
+                      <span className="font-semibold">Prerequisites</span>
+                    </div>
+                    <p className="text-gray-900 font-medium">
+                      {course.prerequisites || course.level}
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 text-gray-600 mb-2">
+                      <FaAward className="text-blue-600" />
+                      <span className="font-semibold">Certification</span>
+                    </div>
+                    <p className="text-gray-900 font-medium">
+                      {course.certification || 'Tekseii Solutions Certificate'}
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 text-gray-600 mb-2">
+                      <FaLaptopCode className="text-blue-600" />
+                      <span className="font-semibold">Software & Tools</span>
+                    </div>
+                    <p className="text-gray-900 font-medium">
+                      {course.software || 'Industry Standard Tools'}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Enroll CTA */}
               <Link
                 to="/contact"
-                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition transform hover:scale-105"
+                className="block w-full bg-blue-600 text-white text-center py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition transform hover:scale-105"
               >
                 Enroll Now
               </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
-      </section>
 
-      {/* Course Image */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
+        {/* Ready to Start Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl shadow-xl p-12 mt-12 text-center"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Ready to Start?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of successful graduates
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-white text-blue-600 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition transform hover:scale-105"
           >
-            <img
-              src={course.image}
-              alt={course.title}
-              className="w-full h-96 object-cover rounded-xl shadow-xl"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Course Modules */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Course Modules</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-              {course.modules.map((module, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition flex items-start gap-3"
-                >
-                  <FaCheckCircle className="text-green-500 text-xl mt-1 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">{module}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Start Learning?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of students who have transformed their careers with this course
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-block bg-white text-blue-600 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition transform hover:scale-105"
-              >
-                Enroll Now
-              </Link>
-              <Link
-                to="/courses"
-                className="inline-block bg-transparent border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition"
-              >
-                Browse More Courses
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            Enroll Now
+          </Link>
+        </motion.section>
+      </div>
     </div>
   )
 }
 
 export default CourseDetail
-

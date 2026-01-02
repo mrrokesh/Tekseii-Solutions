@@ -41,8 +41,8 @@ const GoogleMap = () => {
                 <FaPhone className="text-blue-600 text-xl" />
                 <div>
                   <p className="font-semibold text-gray-900">Phone</p>
-                  <a href="tel:+919876543210" className="text-blue-600 hover:underline">
-                    +91 98765 43210
+                  <a href="tel:+917904352560" className="text-blue-600 hover:underline">
+                    +91 79043 52560
                   </a>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const GoogleMap = () => {
                 Get Directions
               </a>
               <a
-                href="tel:+919876543210"
+                href="tel:+917904352560"
                 className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition inline-flex items-center gap-2"
               >
                 <FaPhone /> Call Now

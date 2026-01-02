@@ -4,7 +4,6 @@ import About from './pages/About'
 import Courses from './pages/Courses'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
-import Careers from './pages/Careers'
 import CourseDetail from './pages/CourseDetail'
 import Layout from './components/Layout'
 
@@ -19,7 +18,6 @@ function App() {
           <Route path="/courses/:courseId" element={<CourseDetail />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/careers" element={<Careers />} />
         </Routes>
       </Layout>
     </Router>

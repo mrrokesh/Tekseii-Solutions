@@ -7,6 +7,21 @@ export const courses = [
     description: 'Master C++ programming from basics to advanced concepts',
     duration: '3 Months',
     level: 'Beginner to Advanced',
+    prerequisites: 'Basic computer knowledge',
+    certification: 'Tekseii Solutions C++ Programming Certificate',
+    software: 'C++ Compiler, IDE (VS Code/DevC++)',
+    objectives: [
+      'Master advanced C++ programming concepts',
+      'Develop object-oriented programming skills',
+      'Implement data structures and algorithms',
+      'Build real-world C++ applications'
+    ],
+    careerOpportunities: [
+      'Software Developer',
+      'Systems Programmer',
+      'Game Developer',
+      'Embedded Systems Engineer'
+    ],
     modules: ['Introduction to C++', 'Data Types & Variables', 'Control Structures', 'Functions', 'Object-Oriented Programming', 'STL & Templates', 'File Handling', 'Advanced C++ Concepts']
   },
   {
@@ -17,6 +32,20 @@ export const courses = [
     description: 'Learn Java fundamentals and core concepts',
     duration: '2 Months',
     level: 'Beginner',
+    prerequisites: 'Basic programming knowledge',
+    certification: 'Tekseii Solutions Basic Java Certificate',
+    software: 'JDK, Eclipse/IntelliJ IDEA',
+    objectives: [
+      'Understand Java programming fundamentals',
+      'Master object-oriented programming basics',
+      'Develop console applications',
+      'Prepare for advanced Java courses'
+    ],
+    careerOpportunities: [
+      'Junior Java Developer',
+      'Software Developer',
+      'Application Developer'
+    ],
     modules: ['Java Basics', 'Variables & Data Types', 'Operators', 'Control Flow', 'Arrays', 'Methods', 'Classes & Objects', 'Inheritance']
   },
   {
@@ -47,6 +76,21 @@ export const courses = [
     description: 'Complete Python programming course from scratch',
     duration: '3 Months',
     level: 'Beginner to Advanced',
+    prerequisites: 'Basic computer knowledge',
+    certification: 'Tekseii Solutions Python Programming Certificate',
+    software: 'Python 3.x, PyCharm/VS Code, Jupyter Notebook',
+    objectives: [
+      'Master Python syntax and fundamentals',
+      'Develop data manipulation skills',
+      'Build real-world Python applications',
+      'Prepare for machine learning and data science'
+    ],
+    careerOpportunities: [
+      'Python Developer',
+      'Data Analyst',
+      'Backend Developer',
+      'Automation Engineer'
+    ],
     modules: ['Python Basics', 'Data Structures', 'Functions & Modules', 'OOP in Python', 'File Handling', 'Exception Handling', 'Regular Expressions', 'Python Libraries']
   },
   {
@@ -127,6 +171,21 @@ export const courses = [
     description: 'Build modern web applications with React',
     duration: '3 Months',
     level: 'Intermediate',
+    prerequisites: 'JavaScript, HTML, CSS',
+    certification: 'Tekseii Solutions React.js Certificate',
+    software: 'Node.js, VS Code, React DevTools',
+    objectives: [
+      'Master React component architecture',
+      'Build dynamic user interfaces',
+      'Implement state management',
+      'Deploy production-ready React apps'
+    ],
+    careerOpportunities: [
+      'Frontend Developer',
+      'React Developer',
+      'Full Stack Developer',
+      'UI Developer'
+    ],
     modules: ['React Basics', 'Components', 'State & Props', 'Hooks', 'Routing', 'State Management', 'Testing', 'Deployment']
   },
   {

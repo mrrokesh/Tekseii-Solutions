@@ -110,7 +110,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 79043 52560"
                   />
                 </div>
 
@@ -191,8 +191,8 @@ const Contact = () => {
                     <FaPhone className="text-blue-600 text-2xl" />
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                      <a href="tel:+919876543210" className="text-blue-600 hover:underline">
-                        +91 98765 43210
+                      <a href="tel:+917904352560" className="text-blue-600 hover:underline">
+                        +91 79043 52560
                       </a>
                     </div>
                   </div>
