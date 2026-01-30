@@ -12,6 +12,9 @@ const TopNav = () => {
             <a href="mailto:info@tekseiisolutions.com" className="flex items-center gap-2 hover:text-blue-300 transition">
               <FaEnvelope /> <span>info@tekseiisolutions.com</span>
             </a>
+            <a href="mailto:support@tekseiisolutions.com" className="flex items-center gap-2 hover:text-blue-300 transition">
+              <FaEnvelope /> <span>support@tekseiisolutions.com</span>
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <a href="https://wa.me/917904352560" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">

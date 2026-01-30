@@ -41,9 +41,12 @@ serve(async (req) => {
       </div>
     `
 
+    // Support both single email string or array of emails
+    const emailRecipients = Array.isArray(to) ? to : (to ? [to] : ['info@tekseiisolutions.com', 'support@tekseiisolutions.com'])
+
     const { data, error } = await resend.emails.send({
       from: 'Tekseii Solutions <noreply@tekseiisolutions.com>',
-      to: to || 'info@tekseiisolutions.com',
+      to: emailRecipients,
       replyTo: email,
       subject: subject || `New ${formType} Form Submission`,
       html: emailBody,

@@ -53,7 +53,7 @@ export const sendEmailNotification = async (formData, formType = 'contact') => {
     // If not set up, gracefully skip email sending
     const { data, error } = await supabase.functions.invoke('smooth-responder', {
       body: {
-        to: 'info@tekseiisolutions.com',
+        to: ['info@tekseiisolutions.com', 'support@tekseiisolutions.com'],
         subject: `New ${formType === 'contact' ? 'Contact' : 'Enquiry'} Form Submission from ${formData.name}`,
         name: formData.name,
         email: formData.email,

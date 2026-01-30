@@ -66,7 +66,10 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-400" />
-                <a href="mailto:info@tekseiisolutions.com" className="text-gray-400 hover:text-white transition">info@tekseiisolutions.com</a>
+                <div className="flex flex-col gap-1">
+                  <a href="mailto:info@tekseiisolutions.com" className="text-gray-400 hover:text-white transition">info@tekseiisolutions.com</a>
+                  <a href="mailto:support@tekseiisolutions.com" className="text-gray-400 hover:text-white transition">support@tekseiisolutions.com</a>
+                </div>
               </li>
             </ul>
           </div>

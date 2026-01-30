@@ -13,7 +13,7 @@ export const resend = resendApiKey ? new Resend(resendApiKey) : null
 // Email configuration
 export const EMAIL_CONFIG = {
   from: 'Tekseii Solutions <noreply@tekseiisolutions.com>',
-  to: 'info@tekseiisolutions.com',
+  to: ['info@tekseiisolutions.com', 'support@tekseiisolutions.com'],
   replyTo: 'support@tekseiisolutions.com'
 }
 
