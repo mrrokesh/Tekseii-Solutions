@@ -50,8 +50,8 @@ const GoogleMap = () => {
                 <FaEnvelope className="text-blue-600 text-xl" />
                 <div>
                   <p className="font-semibold text-gray-900">Email</p>
-                  <a href="mailto:info@tekseii.com" className="text-blue-600 hover:underline">
-                    info@tekseii.com
+                  <a href="mailto:info@tekseiisolutions.com" className="text-blue-600 hover:underline">
+                    info@tekseiisolutions.com
                   </a>
                 </div>
               </div>

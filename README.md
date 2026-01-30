@@ -101,15 +101,21 @@ Edit `src/data/courses.js` to add or modify courses.
 
 Edit `src/pages/Services.jsx` to modify services.
 
-## Email Integration
+## Database & Email Setup
 
-The contact forms currently use mailto links. To integrate with a backend service:
+### Supabase Database Setup
 
-1. Set up an email service (EmailJS, Formspree, or your own backend)
-2. Update form submission handlers in:
-   - `src/components/EnquiryForm.jsx`
-   - `src/pages/Contact.jsx`
-   - `src/pages/Careers.jsx`
+Forms save to Supabase database. To set up:
+
+1. Go to Supabase Dashboard → SQL Editor
+2. Run the SQL from `SETUP_DATABASE.sql`
+3. Verify your API key in `src/config/supabase.js`
+
+See `SUPABASE_SETUP.md` for detailed instructions.
+
+### Email Notifications
+
+Email notifications use Resend via Supabase Edge Functions. See `SUPABASE_SETUP.md` for setup instructions.
 
 ## Deployment
 

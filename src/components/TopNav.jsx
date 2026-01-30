@@ -9,8 +9,8 @@ const TopNav = () => {
             <a href="tel:+917904352560" className="flex items-center gap-2 hover:text-blue-300 transition">
               <FaPhone /> <span>+91 79043 52560</span>
             </a>
-            <a href="mailto:info@tekseii.com" className="flex items-center gap-2 hover:text-blue-300 transition">
-              <FaEnvelope /> <span>info@tekseii.com</span>
+            <a href="mailto:info@tekseiisolutions.com" className="flex items-center gap-2 hover:text-blue-300 transition">
+              <FaEnvelope /> <span>info@tekseiisolutions.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
